@@ -24,6 +24,7 @@ code,pre{font-family:'JetBrains Mono',monospace}
 .nav-mobile-menu a:hover{color:var(--text);background:var(--border)}
 .nav-mobile-menu.open{display:flex}
 
+
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:120px 24px 80px;text-align:center}
 .hero-bg-orbs{position:absolute;inset:0;pointer-events:none;overflow:hidden}
@@ -66,6 +67,7 @@ code,pre{font-family:'JetBrains Mono',monospace}
 .feature-card h3{font-size:1.05rem;font-weight:600;margin-bottom:8px}
 .feature-card p{color:var(--text-muted);font-size:.9rem;line-height:1.65}
 .feature-card p code{background:rgba(255,255,255,0.06);padding:1px 6px;border-radius:4px;font-size:.85em;color:#c084fc}
+
 
 /* DOCS LAYOUT */
 .section{padding-top:calc(var(--nav-h) + 20px)}

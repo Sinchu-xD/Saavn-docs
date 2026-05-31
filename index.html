@@ -40,6 +40,7 @@
     <a href="https://pypi.org/project/SaavnAPI/" target="_blank">PyPI ↗</a>
   </div>
 
+
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-bg-orbs">
@@ -73,6 +74,7 @@
     </div>
   </section>
 
+
   <!-- FEATURES -->
   <section class="features" id="features">
     <div class="container">
@@ -83,11 +85,12 @@
         <div class="feature-card"><div class="feature-icon">🎵</div><h3>320kbps Streams</h3><p>Fetch direct high-quality download links for songs at up to 320kbps — no compromises.</p></div>
         <div class="feature-card"><div class="feature-icon">🔍</div><h3>Powerful Search</h3><p>Search songs, albums, artists, and playlists from JioSaavn's massive 80M+ track catalogue.</p></div>
         <div class="feature-card"><div class="feature-icon">📝</div><h3>Lyrics Support</h3><p>Retrieve full song lyrics directly from JioSaavn — perfect for music bots and apps.</p></div>
-        <div class="feature-card"><div class="feature-icon">💿</div><h3>Albums & Playlists</h3><p>Fetch complete album and playlist data including all tracks, artwork, and metadata.</p></div>
+        <div class="feature-card"><div class="feature-icon">💿</div><h3>Albums &amp; Playlists</h3><p>Fetch complete album and playlist data including all tracks, artwork, and metadata.</p></div>
         <div class="feature-card"><div class="feature-icon">🔑</div><h3>No API Key</h3><p>Zero authentication required. Just install, import, and start building immediately.</p></div>
       </div>
     </div>
   </section>
+
 
   <!-- DOCS -->
   <section class="section" id="installation">
@@ -121,6 +124,7 @@
       </aside>
       <main class="docs-main">
 
+
         <!-- Installation -->
         <div class="doc-section" id="installation-content">
           <h2 class="doc-heading">Installation</h2>
@@ -129,7 +133,6 @@
           <p>To upgrade to the latest version:</p>
           <div class="code-block"><div class="code-header"><span>bash</span><button class="copy-btn" data-clipboard="pip install -U SaavnAPI">Copy</button></div><pre><code>pip install -U SaavnAPI</code></pre></div>
         </div>
-
         <!-- Requirements -->
         <div class="doc-section" id="requirements">
           <h2 class="doc-heading">Requirements</h2>
@@ -141,7 +144,6 @@
             </tbody>
           </table></div>
         </div>
-
         <!-- Quickstart -->
         <div class="doc-section" id="quickstart">
           <h2 class="doc-heading">Quickstart</h2>
@@ -160,12 +162,12 @@ asyncio.run(main())</code></pre></div>
           <div class="info-box"><span class="info-icon">💡</span><span>SaavnAPI supports Python's async context manager (<code>async with</code>) to automatically manage the HTTP session lifecycle.</span></div>
         </div>
 
+
         <!-- API Reference -->
         <div class="doc-section" id="api-reference">
           <h2 class="doc-heading">API Reference</h2>
           <p>All methods are <strong>coroutines</strong> and must be awaited inside an <code>async</code> function.</p>
         </div>
-
         <!-- SaavnClient -->
         <div class="doc-section" id="client">
           <h3 class="doc-subheading">class <code>SaavnClient</code></h3>
@@ -183,7 +185,6 @@ client = SaavnClient()
 ...
 <span class="kw">await</span> client.close()</code></pre></div>
         </div>
-
         <!-- search_songs -->
         <div class="doc-section" id="search-songs">
           <h3 class="doc-subheading"><code>await client.search_songs(query, limit=10)</code></h3>
@@ -216,6 +217,7 @@ client = SaavnClient()
           </div>
         </div>
 
+
         <!-- get_song -->
         <div class="doc-section" id="get-song">
           <h3 class="doc-subheading"><code>await client.get_song(song_id)</code></h3>
@@ -224,7 +226,6 @@ client = SaavnClient()
           <pre><code>song = <span class="kw">await</span> client.get_song(<span class="str">"5WXAlFUi"</span>)
 <span class="fn">print</span>(song.title, song.download_url)</code></pre></div>
         </div>
-
         <!-- get_lyrics -->
         <div class="doc-section" id="get-lyrics">
           <h3 class="doc-subheading"><code>await client.get_lyrics(song_id)</code></h3>
@@ -233,7 +234,6 @@ client = SaavnClient()
           <pre><code>lyrics = <span class="kw">await</span> client.get_lyrics(<span class="str">"5WXAlFUi"</span>)
 <span class="fn">print</span>(lyrics)</code></pre></div>
         </div>
-
         <!-- search_albums -->
         <div class="doc-section" id="search-albums">
           <h3 class="doc-subheading"><code>await client.search_albums(query, limit=10)</code></h3>
@@ -243,7 +243,6 @@ client = SaavnClient()
 <span class="kw">for</span> album <span class="kw">in</span> albums:
     <span class="fn">print</span>(album.name, album.year, album.song_count)</code></pre></div>
         </div>
-
         <!-- get_album -->
         <div class="doc-section" id="get-album">
           <h3 class="doc-subheading"><code>await client.get_album(album_id)</code></h3>
@@ -254,6 +253,7 @@ client = SaavnClient()
     <span class="fn">print</span>(track.title)</code></pre></div>
         </div>
 
+
         <!-- search_playlists -->
         <div class="doc-section" id="search-playlists">
           <h3 class="doc-subheading"><code>await client.search_playlists(query, limit=10)</code></h3>
@@ -263,7 +263,6 @@ client = SaavnClient()
 <span class="kw">for</span> pl <span class="kw">in</span> playlists:
     <span class="fn">print</span>(pl.name, pl.song_count)</code></pre></div>
         </div>
-
         <!-- get_playlist -->
         <div class="doc-section" id="get-playlist">
           <h3 class="doc-subheading"><code>await client.get_playlist(playlist_id)</code></h3>
@@ -273,7 +272,6 @@ client = SaavnClient()
 <span class="kw">for</span> song <span class="kw">in</span> playlist.songs:
     <span class="fn">print</span>(song.title, <span class="str">"-"</span>, song.artist)</code></pre></div>
         </div>
-
         <!-- search_artists -->
         <div class="doc-section" id="search-artists">
           <h3 class="doc-subheading"><code>await client.search_artists(query, limit=10)</code></h3>
@@ -283,7 +281,6 @@ client = SaavnClient()
 <span class="kw">for</span> artist <span class="kw">in</span> artists:
     <span class="fn">print</span>(artist.name, artist.follower_count)</code></pre></div>
         </div>
-
         <!-- get_artist -->
         <div class="doc-section" id="get-artist">
           <h3 class="doc-subheading"><code>await client.get_artist(artist_id)</code></h3>
@@ -294,7 +291,6 @@ client = SaavnClient()
 <span class="kw">for</span> song <span class="kw">in</span> artist.top_songs:
     <span class="fn">print</span>(song.title)</code></pre></div>
         </div>
-
         <!-- get_trending -->
         <div class="doc-section" id="trending">
           <h3 class="doc-subheading"><code>await client.get_trending(limit=20)</code></h3>
@@ -302,29 +298,24 @@ client = SaavnClient()
           <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn" data-clipboard="trending = await client.get_trending(limit=10)&#10;for i, song in enumerate(trending, 1):&#10;    print(f'#{i} {song.title} - {song.artist}')">Copy</button></div>
           <pre><code>trending = <span class="kw">await</span> client.get_trending(limit=<span class="num">10</span>)
 <span class="kw">for</span> i, song <span class="kw">in</span> <span class="fn">enumerate</span>(trending, <span class="num">1</span>):
-    <span class="fn">print</span>(<span class="str">f"#{i} {song.title} - {song.artist}"</span>)</code></pre></div>
+    <span class="fn">print</span>(<span class="str">f"#{i} </span>{song.title}<span class="str"> - </span>{song.artist}<span class="str">"</span>)</code></pre></div>
         </div>
+
 
         <!-- Examples -->
         <div class="doc-section" id="examples">
           <h2 class="doc-heading">Examples</h2>
           <h3 class="doc-subheading">🤖 Telegram Music Bot</h3>
-          <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn" data-clipboard="from SaavnAPI import SaavnClient&#10;&#10;async def handle_song_request(query: str) -> str:&#10;    async with SaavnClient() as client:&#10;        songs = await client.search_songs(query, limit=1)&#10;        if not songs:&#10;            return 'No songs found.'&#10;        song = songs[0]&#10;        return f'🎵 {song.title}
-👤 {song.artist}
-💿 {song.album}
-🔗 {song.download_url}'">Copy</button></div>
+          <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn" data-clipboard="from SaavnAPI import SaavnClient&#10;&#10;async def handle_song_request(query: str) -> str:&#10;    async with SaavnClient() as client:&#10;        songs = await client.search_songs(query, limit=1)&#10;        if not songs:&#10;            return 'No songs found.'&#10;        song = songs[0]&#10;        return f'🎵 {song.title}\n👤 {song.artist}\n💿 {song.album}\n🔗 {song.download_url}'">Copy</button></div>
           <pre><code><span class="kw">from</span> SaavnAPI <span class="kw">import</span> SaavnClient
 
-<span class="kw">async def</span> <span class="fn">handle_song_request</span>(query: str) -&gt; str:
+<span class="kw">async def</span> <span class="fn">handle_song_request</span>(query: str) -> str:
     <span class="kw">async with</span> SaavnClient() <span class="kw">as</span> client:
         songs = <span class="kw">await</span> client.search_songs(query, limit=<span class="num">1</span>)
         <span class="kw">if not</span> songs:
             <span class="kw">return</span> <span class="str">"No songs found."</span>
         song = songs[<span class="num">0</span>]
-        <span class="kw">return</span> <span class="str">f"🎵 {song.title}
-👤 {song.artist}
-💿 {song.album}
-🔗 {song.download_url}"</span></code></pre></div>
+        <span class="kw">return</span> <span class="str">f"🎵 {song.title}\n👤 {song.artist}\n💿 {song.album}\n🔗 {song.download_url}"</span></code></pre></div>
           <h3 class="doc-subheading">🎤 Lyrics Fetcher</h3>
           <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn" data-clipboard="import asyncio&#10;from SaavnAPI import SaavnClient&#10;&#10;async def get_lyrics(song_name: str):&#10;    async with SaavnClient() as client:&#10;        results = await client.search_songs(song_name, limit=1)&#10;        if results:&#10;            lyrics = await client.get_lyrics(results[0].id)&#10;            print(lyrics)&#10;&#10;asyncio.run(get_lyrics('Kal Ho Naa Ho'))">Copy</button></div>
           <pre><code><span class="kw">import</span> asyncio
@@ -339,25 +330,23 @@ client = SaavnClient()
 
 asyncio.run(get_lyrics(<span class="str">"Kal Ho Naa Ho"</span>))</code></pre></div>
         </div>
-
         <!-- Changelog -->
         <div class="doc-section" id="changelog">
           <h2 class="doc-heading">Changelog</h2>
           <div class="changelog-entry">
             <div class="changelog-version">Latest Release</div>
             <ul class="changelog-list">
-              <li>✓ Full async/await support via <code>aiohttp</code></li>
-              <li>✓ <code>async with</code> context manager for session management</li>
-              <li>✓ Song search with quality and download URL</li>
-              <li>✓ Album &amp; playlist fetch with full track listing</li>
-              <li>✓ Artist search and profile retrieval</li>
-              <li>✓ Lyrics retrieval by song ID</li>
-              <li>✓ Trending songs endpoint</li>
-              <li>✓ 320kbps quality support</li>
+              <li>✅ Full async/await support via <code>aiohttp</code></li>
+              <li>✅ <code>async with</code> context manager for session management</li>
+              <li>✅ Song search with quality and download URL</li>
+              <li>✅ Album &amp; playlist fetch with full track listing</li>
+              <li>✅ Artist search and profile retrieval</li>
+              <li>✅ Lyrics retrieval by song ID</li>
+              <li>✅ Trending songs endpoint</li>
+              <li>✅ 320kbps quality support</li>
             </ul>
           </div>
         </div>
-
       </main>
     </div>
   </section>
